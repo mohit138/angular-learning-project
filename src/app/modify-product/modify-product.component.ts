@@ -17,7 +17,8 @@ export class ModifyProductComponent implements OnInit {
   productToModify?:Product;
   form?: FormGroup;
 
-  scrollY = 0;
+  offsetY = window.screen.height / 6
+  scrollY = this.offsetY;
 
   constructor(private productService: ProductService, private router:Router,
     private formBuilder: FormBuilder) { }
@@ -58,8 +59,8 @@ export class ModifyProductComponent implements OnInit {
 
     const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     
-    if(Math.abs(this.scrollY - (number)) >20){
-      this.scrollY = number;
+    if(Math.abs(this.scrollY - (number+this.offsetY)) >20){
+      this.scrollY = number+this.offsetY;
     }
     
 
