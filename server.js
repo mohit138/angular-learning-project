@@ -10,6 +10,9 @@ app.use(express.static('./dist/angular-learning-project'));
 // app.get('/*', (req, res) =>
 //     res.sendFile('index.html', {root: 'dist/angular-learning-project/'}),
 // );
+
+console.log("running server file");
+
 app.get('*', (req, res) => {
     res.sendFile(`./dist/angular-learning-project/index.html`); // load the single view file (angular will handle the page changes on the front-end)
 });
