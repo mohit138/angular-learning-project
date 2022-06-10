@@ -1,0 +1,83 @@
+.navbar-component {
+    display: flex;
+    
+    width: 100%;
+    padding: 10px 0;
+    position: fixed;
+    z-index: 10;
+    height:55px;
+
+    transition: background-color 0.5s ease;
+    
+}
+
+.unscrolled{
+    background-color: #583633;
+}
+.scrolled{
+    background-color:white;
+    border-bottom: black solid 5px;
+}
+
+.logo-container{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.logo {
+    font-size: 1.7rem;
+    padding: 0px 1.5rem;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.scrolled > nav > span >a {
+    color: black;
+}
+.scrolled > nav > span >a:hover {
+    color: #583633;
+}
+
+.scrolled > div > a{
+    color:black;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    transition: .3s;
+}
+
+.nav-link:hover {
+    color:turquoise;
+}
+
+@media screen and (max-width: 1366px){
+    :host{
+        height: 55px;
+    }
+}
+@media screen and (max-width: 1024px){
+    :host{
+        height: 65px;
+    }
+}
+@media screen and (max-width: 864px){
+    :host{
+        height: 50px;
+    }
+}
+@media screen and (max-width: 414px){
+
+}
+@media screen and (max-width: 360px){
+
+}

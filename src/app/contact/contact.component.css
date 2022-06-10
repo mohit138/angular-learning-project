@@ -1,0 +1,38 @@
+.contact-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0; 
+    background-color: white;
+}
+
+.contact-content{
+    font-size: 2rem;
+    font-style: bold;
+    text-align:center;
+    line-height: 5rem;
+}
+.contact-number{
+    text-decoration: none;
+    color:black;
+    transition-duration: .3s;
+}
+.contact-number:hover{
+    color: #656565;
+}
+.contact-mail{
+    text-decoration: none;
+    color:black;
+    transition-duration: .3s;
+}
+.contact-mail:hover{
+    color: #656565;
+}
+
+.ruler{
+    height:5px;
+    background-color: turquoise;
+    width: 140%;
+    margin:1rem 0;
+    margin-left: -20%;
+}

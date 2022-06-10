@@ -1,0 +1,217 @@
+
+.cart-container{
+    min-height: 80vh;
+    background-color: white;
+}
+
+.cart-title{
+    font-size: 2.5rem;
+    text-align:center;
+}
+
+.cart-table{
+    display: flex;
+    justify-content: space-around;
+    padding:.5rem 0;
+}
+.cart-table-title{
+    font-size: 1.6rem;
+    padding-top: 2rem;
+}
+.cart-table >div {
+    align-items: center;
+    justify-content: left;
+    display: flex;
+}
+.cart-table-content{
+    font-size: 1.3rem;
+}
+.cart-name{
+    width: 25%;
+    align-items: center;
+}
+.cart-quantity{
+    width: 10%;
+}
+.cart-price{
+    width:10%;
+}
+.cart-add{
+    width:10%;
+    text-align: center;
+    justify-content: center !important;
+}
+.cart-remove{
+    width:10%;
+    text-align: center;
+    justify-content: center !important;
+}
+.add-button{
+    cursor: pointer;
+    width: 1.5vw;
+    height: 1.5vw;
+    color: turquoise;
+    font: icon;
+    padding: 5px 5px;
+    border-radius: 5px;
+    border: 2px solid rgb(64, 224, 208);
+    transition-duration: .3s;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.add-button:hover {
+    /* color: black; */
+    /* border-color: black; */
+    /* background-color: turquoise; */
+    transform: translate(-2px, -2px);
+    box-shadow: rgba(64, 224, 208, 0.4) 2px 2px, rgba(64, 224, 208, 0.3) 4px 4px;
+}
+.add-button:active{
+    border-color: black;
+    background-color: white;
+    transform: translate(-1px,-1px);
+    box-shadow: rgba(64, 224, 208, 0.4) 2px 2px;
+}
+.remove-button{
+    cursor: pointer;
+    width: 1.5vw;
+    height: 1.5vw;
+    color: rgb(255, 66, 66);
+    font: icon;
+    padding: 5px 5px;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 66, 66);
+    transition-duration: .3s;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.remove-button:hover {
+    /* color: black;
+    border-color: black;
+    background-color: turquoise; */
+    transform: translate(-2px, -2px);
+    box-shadow: rgba(255, 66, 66, 0.4) 2px 2px, rgba(255, 66, 66, 0.3) 4px 4px;
+}
+.remove-button:active{
+    border-color: black;
+    background-color: white;
+    transform: translate(-1px,-1px);
+    box-shadow: rgba(255, 66, 66 0.4) 2px 2px;
+}
+.cart-buttons{
+    font-size: 1.2rem;
+}
+.checkout-button{
+    cursor: pointer;
+    color: turquoise;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid turquoise;
+    transition-duration: .3s;
+    margin-right: 1rem;
+}
+.checkout-button:hover {
+    /* color: black;
+    background-color: turquoise; */
+    transform: translate(-2px, -2px);
+    box-shadow: rgba(64, 224, 208, 0.4) 2px 2px, rgba(64, 224, 208, 0.3) 4px 4px;
+}
+
+.checkout-button:active{
+    border-color: black;
+    background-color: white;
+    transform: translate(-1px,-1px);
+    box-shadow: rgba(64, 224, 208, 0.4) 2px 2px;
+}
+.clear-all-button{
+    cursor: pointer;
+    color: rgb(255, 66, 66);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 66, 66);
+    transition-duration: .3s;
+    margin-right: 1rem;
+}
+.clear-all-button:hover {
+    /* color: black;
+    background-color: turquoise; */
+    transform: translate(-2px, -2px);
+    box-shadow: rgba(255, 66, 66, 0.4) 2px 2px, rgba(255, 66, 66, 0.3) 4px 4px;
+
+}
+
+.clear-all-button:active{
+    border-color: black;
+    background-color: white;
+    transform: translate(-1px,-1px);
+    box-shadow: rgba(255, 66, 66, 0.4) 2px 2px;
+}
+.ruler{
+    height:2px;
+    background-color: turquoise;
+    width: 80%;
+    margin:2rem 0 0 10%;
+}
+
+/* ---- */
+/* 
+.items-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.list-container{
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.list-title{
+    font-size: 1.5rem;
+    width: 60%;
+    text-align: left;
+    padding: 0.5rem 1.5rem;
+}
+
+.add-button-container{
+    width: 20%;
+    text-align: center;
+}
+
+.remove-button-container{
+    width: 20%;
+    text-align: center;
+}
+
+
+.add-button:hover {
+    color: black;
+    background-color: turquoise;
+}
+
+.add-button:active{
+    border-color: black;
+    background-color: white;
+}
+
+
+.remove-button:hover {
+    color: black;
+    background-color: turquoise;
+}
+
+.remove-button:active{
+    border-color: black;
+    background-color: white;
+}
+
+.clear-all-button-container{
+    padding: 1rem;
+    display: flex;
+}
+ */

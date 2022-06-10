@@ -1,0 +1,65 @@
+
+
+<div class="flavours-container">
+    <div class="flavours-title">Flavour select</div>
+    <div class="flavours-content" >
+        <span *ngFor="let flavour of flavours">
+            <span [ngClass]="{'flavours-link-active': flavour===selectedFlavour}" class="flavours-link" (click)="onFlavourSelect(flavour)">
+                {{flavour[0].toUpperCase() + flavour.slice(1)}}
+            </span>
+        </span>
+    </div>
+</div>
+
+
+<div class="grinds-container">
+    <div class="grinds-title">Grind select</div>
+    <div class="grinds-content" >
+        <span *ngFor="let grind of grinds">
+            <span [ngClass]="{'grinds-link-active': grind===selectedGrind}" class="grinds-link" (click)="onGrindSelect(grind)">
+                {{grind[0].toUpperCase() + grind.slice(1)}}
+            </span>
+        </span>
+    </div>
+</div>
+
+
+<div class="product-container" *ngIf="selectedProduct" >
+    <div class="product-box-container">
+        <div class="product-box">
+            <span class="product-flavour">{{selectedProduct.flavour.toUpperCase()}} - </span>
+            <span class="product-grind"> {{selectedProduct.grind[0].toUpperCase() + selectedProduct.grind.slice(1)}} Grind</span>
+            <div class="product-type">{{selectedProduct.type[0].toUpperCase() + selectedProduct.type.slice(1)}}</div>
+            <div class="product-description">{{selectedProduct.description}}</div>
+            <div class="product-price">₹ {{selectedProduct.price}} <strong style="font-size: 2rem;">/</strong>100gm</div>
+            <div class="product-sec-images-container">
+                <img class="product-sec-image" *ngIf="selectedProduct.grind==='coarse'" src="../../assets/french_press_coarse.jpg">
+                <img class="product-sec-image" *ngIf="selectedProduct.grind==='medium' || selectedProduct.grind==='coarse'" src="../../assets/pour_over_coarse_med.jpg">
+                <img class="product-sec-image" *ngIf="selectedProduct.grind==='medium'" src="../../assets/drip_coffee_med.jpg">
+                <img class="product-sec-image" *ngIf="selectedProduct.grind==='fine'" src="../../assets/espresso_fine.jpg">
+                <img class="product-sec-image" *ngIf="selectedProduct.grind==='medium' || selectedProduct.grind==='fine'" src="../../assets/siphon_med_fine.jpg">
+            </div>
+        </div>
+        <div class="product-cart-button-container">
+            <div (click)="addToCart(selectedProduct)" class="add-to-cart-link" *ngIf="selectedProduct" >
+                <span >Add To Cart</span>
+            </div>
+            <div routerLink="/cart" class="goto-cart" *ngIf="selectedProduct" >
+                <span >
+                    <span>Goto Cart</span>
+                </span>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<div *ngIf="selectedProduct===undefined">
+    <div class="unavailable-container">
+        <div class="unavailable-content">
+            Oops! We are very sorry, but the {{selectedFlavour[0].toUpperCase() + selectedFlavour.slice(1)}} flavoured {{selectedGrind[0].toUpperCase() + selectedGrind.slice(1)}} grind is <span style="color: turquoise;"><strong>Not Available</strong></span> .
+        </div>
+    </div>
+</div>
+
+<!-- <button (click)="postProduct()">Adding product</button> -->

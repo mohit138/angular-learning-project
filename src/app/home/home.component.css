@@ -1,0 +1,75 @@
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: turquoise;
+    
+}
+
+.hero-space {
+    width: 70%;
+    display: flex;
+}
+
+.hero-content {
+    display: flex;
+    width: 30%;
+    background-color: white;
+    font-size: 2.7rem;
+    color: #583633;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1rem;
+    
+}
+
+.home-quote-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 25vh;
+    background-color: #583633;
+}
+
+.home-quote-content{
+    color:white;
+    font-size: 2rem;
+}
+
+.product-button-container{
+    padding: 1rem;
+    background-color: white;
+    color: #583633;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+}
+
+.home-product-container{
+    font-size:3rem;
+}
+
+.product-button{
+    font-size: 2.7rem;
+    cursor: pointer;
+    color: turquoise;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid turquoise;
+    transition-duration: .3s;
+    margin-right: 1rem;
+}
+
+.product-button:hover{
+    transform: translate(-2px, -2px);
+    box-shadow: rgba(64, 224, 208, 0.4) 3px 3px, rgba(64, 224, 208, 0.3) 6px 6px;
+}
+
+.product-button:active{
+    transform: translate(-3px,-3px);
+    box-shadow: rgba(64, 224, 208, 0.4) 3px 3px;
+}

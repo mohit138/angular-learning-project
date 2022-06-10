@@ -1,0 +1,24 @@
+<div [ngClass]="{'unscrolled':scrolled===0 , 'scrolled':scrolled==1, 'navbar-component':1}">
+<div class="logo-container"><a routerLink="/" class="logo">Coffee Products Inc.</a></div>
+<nav class="nav-container">
+    <span>
+        <a routerLink="/" class="nav-link">Home</a> &nbsp;
+    </span>
+    <span>
+        <a routerLink="/products" class="nav-link">Products</a> &nbsp;
+    </span>
+    <span>
+        <a routerLink="/contact" class="nav-link">Contact</a> &nbsp;
+    </span>
+    <span>
+        <a routerLink="/cart" class="nav-link">Cart</a> &nbsp;
+    </span>
+    <span>
+        <a routerLink="/add" class="nav-link">Add Product</a> &nbsp;
+    </span>
+    <span>
+        <a routerLink="/modify" class="nav-link">Modify Product</a> &nbsp;
+    </span>
+    
+</nav>
+</div>

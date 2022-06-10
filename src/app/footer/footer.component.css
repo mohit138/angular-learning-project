@@ -1,0 +1,32 @@
+.footer-container{
+    background-color: #583633;
+    text-align: center;
+    margin-top:5px;
+}
+
+.first-line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.links-container{
+    padding:1rem 1rem;
+}
+.footer-link{
+    color:white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    transition: .3s;
+}
+.footer-link:hover{
+    color: turquoise;
+}
+.contact-container{
+    padding: 1rem;
+}
+
+.copyright{
+    color:white;
+    padding: 1rem 0;
+}

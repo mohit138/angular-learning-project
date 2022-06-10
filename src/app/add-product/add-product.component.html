@@ -1,0 +1,74 @@
+<div class="add-products-title">Add Products</div>
+
+<div class="add-products-container">
+    <div *ngIf="form">
+        <form
+            [formGroup]="form"
+            (ngSubmit)="onSubmit(form.value)">
+            
+                <div class="form-element">
+                    <label for="name">Name*</label>
+                    <div class="form-input">
+                        <input type="text" name="name" id="name" formControlName="name">
+                        <div *ngIf="form.get('name')?.touched && form.get('name')?.invalid" class="error">
+                            Enter a valid Name.
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="form-element">
+                    <label for="flavour">Flavour*</label>
+                    <div class="form-input">
+                        <input type="text" name="flavour" id="flavour" formControlName="flavour">
+                        <div *ngIf="form.get('flavour')?.touched && form.get('flavour')?.invalid" class="error">
+                            Enter a valid Flavour
+                        </div>
+                    </div>
+                </div>
+                <div class="form-element">
+                    <label for="grind">Grind*</label>
+                    <div class="form-input">
+                        <select name="grind" id="grind" formControlName="grind">
+                            <option value="fine">Fine</option>
+                            <option value="medium">Medium</option>
+                            <option value="coarse">Coarse</option>
+                        </select>
+                        <div *ngIf="form.get('grind')?.touched && form.get('grind')?.invalid" class="error">
+                            Select the Grind
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="form-element">
+                    <label for="type">Type*</label>
+                    <div class="form-input">
+                        <input type="text" name="type" id="type" formControlName="type">
+                        <div *ngIf="form.get('type')?.touched && form.get('type')?.invalid" class="error">
+                            Enter a valid Type of Coffee
+                        </div>
+                    </div>
+                </div>
+                <div class="form-element">
+                    <label for="description">Description*</label>
+                    <div class="form-input">
+                        <input type="textarea" name="description" id="description" formControlName="description">
+                        <div *ngIf="form.get('description')?.touched && form.get('description')?.invalid" class="error">
+                            Enter description.
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="form-element">
+                    <label for="price">Price*</label>
+                    <div class="form-input">
+                        <input type="number" name="price" id="price" formControlName="price">
+                        <div *ngIf="form.get('price')?.touched && form.get('price')?.invalid" class="error">
+                            Enter price.
+                        </div>
+                    </div>
+                    
+                </div>
+            <button class="form-button" type="submit" [disabled]="!form.valid">Add Product</button>
+        </form>
+    </div>    
+</div>

@@ -1,0 +1,59 @@
+
+
+<div class="cart-container">
+
+    <div class="cart-title">Cart</div>
+
+    <div class="cart-table cart-table-title">
+        <div class="cart-name">Name</div>
+        <div class="cart-quantity">Quantity</div>
+        <div class="cart-price">Price</div>
+        <div class="cart-add">Add</div>
+        <div class="cart-remove">Remove</div>
+    </div>
+
+    <div class="cart-table cart-table-content" *ngFor='let item of cartItems'>
+        <div class="cart-name">{{item.product.name}}</div>
+        <div class="cart-quantity">{{item.quantity}}</div>
+        <div class="cart-price">{{item.product.price * item.quantity}}</div>
+        <div class="cart-add"><div class="add-button" (click)="addProductToCart(item.product)" ><strong>+</strong></div></div>
+        <div class="cart-remove"><div class="remove-button" (click)="removeProductFromCart(item.product)"><strong>-</strong></div></div>
+    </div>
+
+    <div class="ruler"></div>
+
+    <div class="cart-table cart-table-title">
+        <div class="cart-name">Total Amount</div>
+        <div class="cart-quantity"> - </div>
+        <div class="cart-price">{{total}}</div>
+        <div class="cart-add"></div>
+        <div class="cart-remove"></div>
+    </div>
+
+
+    <div class="cart-table cart-buttons">
+        <div class="cart-name">
+            <div class="checkout-button">Checkout</div>
+            <div class="clear-all-button" (click)="clearAllItems()">Clear All</div>
+        </div>
+        <div class="cart-quantity"></div>
+        <div class="cart-price"></div>
+        <div class="cart-add"></div>
+        <div class="cart-remove"></div>
+    </div>
+
+    <!-- <div class="items-container">
+        <div class="list-title" style="font-size: 2rem;">Name - (Quantity)</div>
+        <div class="add-button-container"></div>
+            <div class="remove-button-container"></div>
+    </div>
+
+    <div class="items-container" *ngFor='let item of cartItems'>
+        <div *ngIf="item" class="list-container">
+            <div class="list-title">{{item.product.flavour[0].toUpperCase()+item.product.flavour.slice(1)}}  {{item.product.grind[0].toUpperCase() + item.product.grind.slice(1)}} Grind - {{item.quantity}}</div>
+            <div class="add-button-container"><div class="add-button" (click)="addProductToCart(item.product)">Add</div></div>
+            <div class="remove-button-container"><div class="remove-button" (click)="removeProductFromCart(item.product)">Remove</div></div>
+        </div>
+    </div> -->
+    
+</div>

@@ -1,0 +1,82 @@
+/* HeroSearch private styles */
+
+:host{
+  background-color: #583633;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem 0;
+  padding-top: 55px;
+}
+
+label {
+    display: block;
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+    color: white;
+  
+  }
+  input {
+    padding: .5rem;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    display: block;
+  }
+  
+  input:focus {
+    outline: #336699 auto 1px;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  .search-result li a {
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    display: inline-block;
+    width: 100%;
+    max-width: 600px;
+    padding: .5rem;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .search-result li a:hover {
+    background-color: #435A60;
+    color: white;
+  }
+  
+  ul.search-result {
+    margin-top: 0;
+    position: absolute;
+    background-color: aliceblue;
+    padding-left: 0;
+    z-index: 10;
+  }
+
+  @media screen and (max-width: 1366px){
+    :host{
+        padding-top: 55px;
+    }
+}
+@media screen and (max-width: 1024px){
+    :host{
+        padding-top: 65px;
+    }
+}
+@media screen and (max-width: 864px){
+    :host{
+        padding-top: 50px;
+    }
+}
+@media screen and (max-width: 414px){
+
+}
+@media screen and (max-width: 360px){
+
+}

@@ -1,0 +1,182 @@
+:host{
+    position: relative;
+}
+
+.modify-product-title{
+    font-size:2.5rem;
+    text-align:center;
+    padding:1rem 0;
+    background-color: white;
+}
+
+.product-list-item{
+    padding:.5rem 0;
+    margin-left:15%;
+    width:70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+}
+
+.product-list-item span{
+    width: 60%;
+}
+
+.product-list-name{
+    font-size: 1.5rem;
+}
+.product-list-button-container{
+    width:20%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.form-container{
+    background-color: white;
+    position: absolute;
+    left: 20%;
+    /* top:10%; */
+    width:60%;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 100px;
+    border: 3px solid turquoise;
+}
+
+.form-title{
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.form-element{
+    padding:.5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-element label{
+    width: 20%;
+    font-size: 1.3rem;
+}
+.form-input{
+    width: 70%;
+}
+input:focus {
+	outline: none;
+  	border: 2px solid turquoise;
+}
+select:focus{
+    outline: none;
+  	border: 2px solid turquoise;
+}
+.form-input *{
+    width: 100%;
+    font-size:1.1rem;
+}
+.form-element select{
+    width: 50%;
+    font-size:1.1rem;
+}
+
+.form-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.modal-form-submit-button {
+    /* cursor: pointer;
+    color: turquoise;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid turquoise;
+    transition-duration: .3s;
+    background-color: white; */
+    margin: 0 .5rem;
+}
+/* .modal-form-submit-button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: rgba(64, 224, 208, 0.4) 2px 2px, rgba(64, 224, 208, 0.3) 4px 4px;
+}
+
+.modal-form-submit-button:active{
+    transform: translate(-1px,-1px);
+    box-shadow: rgba(64, 224, 208, 0.4) 2px 2px;
+} */
+.modal-form-close-button{
+    /* cursor: pointer;
+    color: rgb(255, 66, 66);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 66, 66);
+    transition-duration: .3s;
+    background-color: white; */
+    margin: 0 0.5rem;
+}
+/* .modal-form-close-button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: rgba(255, 66, 66, 0.4) 2px 2px, rgba(255, 66, 66, 0.3) 4px 4px;
+
+}
+
+.modal-form-close-button:active{
+    transform: translate(-1px,-1px);
+    box-shadow: rgba(255, 66, 66, 0.4) 2px 2px;
+} */
+.break{
+    width: 100%;
+}
+.ruler{
+    height:2px;
+    background-color: turquoise;
+    width: 70%;
+    margin:0 0 0 15%;
+}
+
+.green-button {
+    cursor: pointer;
+    color: turquoise;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid turquoise;
+    transition-duration: .3s;
+    background-color: white;
+}
+.green-button:hover {
+    /* color: black;
+    background-color: turquoise; */
+    transform: translate(-2px, -2px);
+    box-shadow: rgba(64, 224, 208, 0.4) 2px 2px, rgba(64, 224, 208, 0.3) 4px 4px;
+}
+
+.green-button:active{
+    /* border-color: black;
+    background-color: white; */
+    transform: translate(-1px,-1px);
+    box-shadow: rgba(64, 224, 208, 0.4) 2px 2px;
+}
+.red-button{
+    cursor: pointer;
+    color: rgb(255, 66, 66);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 66, 66);
+    transition-duration: .3s;
+    background-color: white;
+}
+.red-button:hover {
+    /* color: black;
+    background-color: turquoise; */
+    transform: translate(-2px, -2px);
+    box-shadow: rgba(255, 66, 66, 0.4) 2px 2px, rgba(255, 66, 66, 0.3) 4px 4px;
+
+}
+
+.red-button:active{
+    /* border-color: black;
+    background-color: white; */
+    transform: translate(-1px,-1px);
+    box-shadow: rgba(255, 66, 66, 0.4) 2px 2px;
+}
