@@ -1,0 +1,3 @@
+server.js merge=ours
+package.json merge=ours
+src\app\product.service.ts merge=ours
