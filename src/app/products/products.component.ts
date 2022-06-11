@@ -20,6 +20,8 @@ export class ProductsComponent implements OnInit {
   flavours: string[] = [];
   grinds: string[] = [];
 
+  loading = true;
+
 
   constructor(private productService: ProductService, private cartService: CartService) { }
 
@@ -40,11 +42,22 @@ export class ProductsComponent implements OnInit {
   // after we get products, we do onSelect and onSearchSelect, to get state from service to component.
   getProducts(): void {
     this.productService.getProducts()
-      .subscribe((products)=> {
+    .subscribe({    
+      next: (products) => {
         this.products=products;
         this.onSelect();
         this.onSearchSelect();
-      });
+      },
+      error:(error) => {
+        // this.errors = error;
+      },
+      complete: () => {
+        // 'onCompleted' callback.
+        // No errors, route to new page here
+        this.loading = false;
+      }
+      
+    });
   }
   getFlavours(): void {
     this.productService.getFlavours()

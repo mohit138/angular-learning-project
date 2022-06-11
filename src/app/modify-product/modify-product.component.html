@@ -1,5 +1,8 @@
+<div *ngIf="loading" style="text-align: center;">
+    <img src ="../../assets/Rolling-1s-200px.gif">
+</div>
 
-<div class="modify-product-title">Modify Products</div>
+<div *ngIf="!loading" class="modify-product-title">Modify Products</div>
 <div *ngFor="let product of products">
     <div class="product-list-item">
         <span class="product-list-name">{{product.name}}</span>
@@ -13,7 +16,7 @@
     <div class="ruler"></div>
 </div>
 
-<div class="form-container" *ngIf="productToModify" [ngStyle]="{'top': scrollY + 'px'}">
+<div  class="form-container" *ngIf="productToModify && !loading" [ngStyle]="{'top': scrollY + 'px'}">
     <div *ngIf="form">
         <div class="form-title">Modify and Save the Changes</div>
         <form 

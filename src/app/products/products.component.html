@@ -1,6 +1,8 @@
+<div *ngIf="loading" style="text-align: center;">
+    <img src ="../../assets/Rolling-1s-200px.gif">
+</div>
 
-
-<div class="flavours-container">
+<div *ngIf="!loading" class="flavours-container">
     <div class="flavours-title">Flavour select</div>
     <div class="flavours-content" >
         <span *ngFor="let flavour of flavours">
@@ -12,7 +14,7 @@
 </div>
 
 
-<div class="grinds-container">
+<div  *ngIf="!loading" class="grinds-container">
     <div class="grinds-title">Grind select</div>
     <div class="grinds-content" >
         <span *ngFor="let grind of grinds">
@@ -24,7 +26,7 @@
 </div>
 
 
-<div class="product-container" *ngIf="selectedProduct" >
+<div class="product-container" *ngIf="selectedProduct && !loading" >
     <div class="product-box-container">
         <div class="product-box">
             <span class="product-flavour">{{selectedProduct.flavour.toUpperCase()}} - </span>
@@ -54,7 +56,7 @@
     
 </div>
 
-<div *ngIf="selectedProduct===undefined">
+<div *ngIf="selectedProduct===undefined && !loading">
     <div class="unavailable-container">
         <div class="unavailable-content">
             Oops! We are very sorry, but the {{selectedFlavour[0].toUpperCase() + selectedFlavour.slice(1)}} flavoured {{selectedGrind[0].toUpperCase() + selectedGrind.slice(1)}} grind is <span style="color: turquoise;"><strong>Not Available</strong></span> .
