@@ -14,9 +14,9 @@ export class ProductService {
   // private flavoursUrl = 'api/flavours';
   // private grindsUrl = 'api/grinds';
 
-  private productsUrl = 'https://coffee-store-backend.herokuapp.com/products';
-  private flavoursUrl = 'https://coffee-store-backend.herokuapp.com/flavours';
-  private grindsUrl = 'https://coffee-store-backend.herokuapp.com/grinds';
+  private productsUrl = 'http://localhost:8080/products';
+  private flavoursUrl = 'http://localhost:8080/flavours';
+  private grindsUrl = 'http://localhost:8080/grinds';
   
   invokeProductOnSearchSelectFunction = new EventEmitter();
   subsVar?: Subscription;
