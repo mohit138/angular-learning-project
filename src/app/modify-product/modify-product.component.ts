@@ -20,6 +20,8 @@ export class ModifyProductComponent implements OnInit {
   offsetY = window.screen.height / 6
   scrollY = this.offsetY;
 
+  loading = true;
+
   constructor(private productService: ProductService, private router:Router,
     private formBuilder: FormBuilder) { }
 
@@ -68,9 +70,19 @@ export class ModifyProductComponent implements OnInit {
 
   getProducts():void {
     this.productService.getProducts()
-      .subscribe((products) => {
-        this.products = products; 
-      });
+    .subscribe({    
+      next: (products) => {
+        this.products=products;
+      },
+      error:(error) => {
+        // this.errors = error;
+      },
+      complete: () => {
+        // 'onCompleted' callback.
+        // No errors, route to new page here
+        this.loading = false;
+      }
+    });
   }
 
   deleteProduct(product: Product):void {
