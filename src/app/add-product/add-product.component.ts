@@ -16,6 +16,7 @@ export class AddProductComponent implements OnInit {
 
   form?: FormGroup;
 
+  products: Product[] = [];
 
   constructor(private productService: ProductService,
     private formBuilder: FormBuilder,
@@ -47,6 +48,8 @@ export class AddProductComponent implements OnInit {
         Validators.required
       ]))
     });
+
+    this.getProducts();
   }
 
   tmpProduct: Product = {
@@ -61,6 +64,7 @@ export class AddProductComponent implements OnInit {
 
 
   onSubmit(product: Product){
+    product.id = this.products.length + 1;
     this.productService.addProduct(product)
       .subscribe({    
         next: (result) => {
@@ -86,6 +90,21 @@ export class AddProductComponent implements OnInit {
         
       });
     
+  }
+
+  getProducts(): void {
+    this.productService.getProducts()
+    .subscribe({    
+      next: (products) => {
+        this.products=products;
+      },
+      error:(error) => {
+        // this.errors = error;
+      },
+      complete: () => {
+      }
+      
+    });
   }
 
 }
