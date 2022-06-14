@@ -1,24 +1,37 @@
 <div [ngClass]="{'unscrolled':scrolled===0 , 'scrolled':scrolled==1, 'navbar-component':1}">
 <div class="logo-container"><a routerLink="/" class="logo">Coffee Products Inc.</a></div>
 <nav class="nav-container">
-    <span>
-        <a routerLink="/" class="nav-link">Home</a> &nbsp;
-    </span>
-    <span>
-        <a routerLink="/products" class="nav-link">Products</a> &nbsp;
-    </span>
-    <span>
-        <a routerLink="/contact" class="nav-link">Contact</a> &nbsp;
-    </span>
-    <span>
-        <a routerLink="/cart" class="nav-link">Cart</a> &nbsp;
-    </span>
-    <span>
-        <a routerLink="/add" class="nav-link">Add Product</a> &nbsp;
-    </span>
-    <span>
-        <a routerLink="/modify" class="nav-link">Modify Product</a> &nbsp;
-    </span>
+    <div class="nav-link-container">
+        <a routerLink="/" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">Home</a>  
+    </div>
+    <div class="nav-link-container">
+        <a routerLink="/products" [routerLinkActive]="['active']" class="nav-link">Products</a>  
+    </div>
+    <div class="nav-link-container">
+        <a routerLink="/contact" [routerLinkActive]="['active']" class="nav-link">Contact</a>  
+    </div>
+    <div class="nav-link-container">
+        <a routerLink="/cart" [routerLinkActive]="['active']" class="nav-link">Cart</a>  
+    </div>
+    <div class="nav-link-container">
+        <a *ngIf="isAdminLoggedIn" routerLink="/add" [routerLinkActive]="['active']" class="nav-link">Add Product</a>  
+    </div>
+    <div class="nav-link-container">
+        <a *ngIf="isAdminLoggedIn" routerLink="/modify" [routerLinkActive]="['active']" class="nav-link">Modify Product</a>  
+    </div>
+
+    <div class="nav-link-container">
+        <a *ngIf="!isLoggedIn" routerLink="/register" [routerLinkActive]="['active']" class="nav-link">Sign Up</a>  
+    </div>
+    <div class="nav-link-container">
+        <a *ngIf="!isLoggedIn" routerLink="/login" [routerLinkActive]="['active']" class="nav-link">Sign In</a>  
+    </div>
+    <div class="nav-link-container">
+        <a *ngIf="isLoggedIn" routerLink="/profile" [routerLinkActive]="['active']" class="nav-link">Profile</a>  
+    </div>
+    <div class="nav-link-container">
+        <a *ngIf="isLoggedIn" (click)="logout()" class="nav-link">Logout</a>  
+    </div>
     
 </nav>
 </div>

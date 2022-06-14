@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PRODUCTS } from '../app.mock-products';
 import { Product } from '../app.product';
 import { CartService } from '../cart.service';
 import { ProductService } from '../product.service';
+import { TokenStorageService } from '../_services/token-storage.service';
 
 @Component({
   selector: 'app-products',
@@ -22,10 +24,15 @@ export class ProductsComponent implements OnInit {
 
   loading = true;
 
-
-  constructor(private productService: ProductService, private cartService: CartService) { }
+  constructor(private productService: ProductService, private cartService: CartService,
+    private tokenStorageService:TokenStorageService,
+    private router: Router) { }
 
   ngOnInit(): void {
+    if(this.tokenStorageService.redirectUrl!==""){
+      this.tokenStorageService.redirectUrl="";
+      window.location.reload();
+    }
     if(this.productService.subsVar==undefined){
       this.productService.subsVar = this.productService.invokeProductOnSearchSelectFunction.subscribe(
         () => {
@@ -122,7 +129,13 @@ export class ProductsComponent implements OnInit {
   // }
 
   addToCart (selectedProduct: Product){
-    this.cartService.add(selectedProduct);
+    if(this.tokenStorageService.getToken()){
+      this.cartService.add(selectedProduct);
+    }else{
+      this.tokenStorageService.redirectUrl=this.router.url;
+      this.router.navigate(['/login']);
+    }
+
   }
 
 }

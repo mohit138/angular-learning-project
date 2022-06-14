@@ -17,6 +17,10 @@ import { AddProductModule } from './add-product/add-product.module';
 import { ModifyProductComponent } from './modify-product/modify-product.component';
 import { ModifyProductModule } from './modify-product/modify-product.module';
 import { FooterModule } from './footer/footer.module';
+import { LoginModule } from './login/login.module';
+import { RegisterModule } from './register/register.module';
+import { authInterceptorProviders } from './_helpers/auth.interceptor';
+import { ProfileModule } from './profile/profile.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,10 @@ import { FooterModule } from './footer/footer.module';
     HttpClientModule,
     AddProductModule,
     ModifyProductModule,
-    FooterModule
+    FooterModule,
+    LoginModule,
+    RegisterModule,
+    ProfileModule
     // HttpClientInMemoryWebApiModule intercepts http request,
     // so, REMOVE when a real server is ready to recieve request
     // HttpClientInMemoryWebApiModule.forRoot(
@@ -42,7 +49,7 @@ import { FooterModule } from './footer/footer.module';
     // )
 
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

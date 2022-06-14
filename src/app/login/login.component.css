@@ -1,0 +1,62 @@
+.card-container{
+    width: 70%;
+    margin-left:15%;
+    text-align: center;
+}
+
+.login-title{
+    font-size:1.7rem;  
+    padding: 1rem 0;
+}
+
+.form-group{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: left;
+    padding: 0.5rem 0;
+}
+
+label{
+    width:40%;
+}
+input{
+    width: 60%;
+    font-size: 1.1rem;
+}
+
+input:focus{
+    outline: none;
+  	border: 2px solid turquoise;
+}
+
+.alert{
+    color:rgb(255, 66, 66);
+}
+
+.login-button{
+    margin: auto;
+    font-size: 1.1rem;
+}
+
+.green-button {
+    cursor: pointer;
+    color: turquoise;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid turquoise;
+    transition-duration: .3s;
+    background-color: white;
+}
+.green-button:hover {
+    /* color: black;
+    background-color: turquoise; */
+    transform: translate(-2px, -2px);
+    box-shadow: rgba(64, 224, 208, 0.4) 2px 2px, rgba(64, 224, 208, 0.3) 4px 4px;
+}
+
+.green-button:active{
+    /* border-color: black;
+    background-color: white; */
+    transform: translate(-1px,-1px);
+    box-shadow: rgba(64, 224, 208, 0.4) 2px 2px;
+}

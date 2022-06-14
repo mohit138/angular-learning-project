@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CartItem } from '../app.cartItem';
 import { Product } from '../app.product';
 import { CartService } from '../cart.service';
+import { TokenStorageService } from '../_services/token-storage.service';
 
 @Component({
   selector: 'app-cart',
@@ -14,10 +15,17 @@ export class CartComponent implements OnInit {
 
   total = 0;
   
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private tokenStorageService: TokenStorageService) { }
 
   ngOnInit(): void {
+    
+    if(this.tokenStorageService.redirectUrl==="/cart"){
+      this.tokenStorageService.redirectUrl="";
+      window.location.reload();
+    }
+
     this.getCartItems();
+    console.log(this.cartItems);
   }
 
   getCartItems(): void{
