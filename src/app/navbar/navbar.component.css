@@ -32,10 +32,10 @@
     text-decoration: none;
 }
 
-.scrolled > nav > span >a {
-    color: black;
+.scrolled > nav > div >a {
+    color: black !important;
 }
-.scrolled > nav > span >a:hover {
+.scrolled > nav > div >a:hover {
     color: #583633;
 }
 
@@ -47,18 +47,38 @@
     display: flex;
     align-items: center;
 }
-
+.nav-link-container{
+    position: relative;
+    text-align: center;
+    align-items: center;
+}
 .nav-link {
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
     padding: 0 1rem;
     transition: .3s;
+    cursor: pointer;
 }
 
 .nav-link:hover {
     color:turquoise;
 }
+
+.active{
+    color:turquoise;
+
+}
+.active:after{
+    content: "";
+    background: turquoise;
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    width: 70%;
+    height: 2px;
+}
+
 
 @media screen and (max-width: 1366px){
     :host{
