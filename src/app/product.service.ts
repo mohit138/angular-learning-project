@@ -14,6 +14,7 @@ export class ProductService {
   // private flavoursUrl = 'api/flavours';
   // private grindsUrl = 'api/grinds';
 
+  // will have to modify for new deployments
   private productsUrl = 'https://coffee-store-backend.herokuapp.com/products';
   private flavoursUrl = 'https://coffee-store-backend.herokuapp.com/flavours';
   private grindsUrl = 'https://coffee-store-backend.herokuapp.com/grinds';
